@@ -1,5 +1,5 @@
 <?php 
-$connect = new PDO("mysql:host=localhost;dbname=assignment", "root", "");
+$connect = new PDO("mysql:host=yy-ver1-rds.ctqigw62kpxk.us-east-1.rds.amazonaws.com;port=3306;dbname=PETER", "yen0809", "p3TEr100");
 
 if(isset($_POST["rating_data"]))
 {
