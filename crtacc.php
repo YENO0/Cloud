@@ -58,7 +58,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
     if (empty($msg) && $password === $rptpass) {
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-        $sql = "INSERT INTO Loginc(UserID,Email,Password,Fname,Lname,Contact,Street,Town,Postcode,State,SecurityCode,Gender) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO loginc(UserID,Email,Password,Fname,Lname,Contact,Street,Town,Postcode,State,SecurityCode,Gender) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $con->prepare($sql); //$stmt = $con->prepare($sql);
         $stmt->bind_param('ssssssssssss', $username, $email, $password, $fname, $lname, $contact, $street, $town, $postcode, $state, $securityCode, $gender);
 

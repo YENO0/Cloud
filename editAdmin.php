@@ -21,10 +21,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 // Retrieve adminid or email from cookie, if set
         if (isset($_COOKIE['AdminID'])) {
             $adminID = $_COOKIE['AdminID'];
-            $sql = "SELECT * FROM Logina WHERE AdminID = '$adminID'";
+            $sql = "SELECT * FROM logina WHERE AdminID = '$adminID'";
         } elseif (isset($_COOKIE['Aemail'])) {
             $aemail = $_COOKIE['Aemail'];
-            $sql = "SELECT * FROM Logina WHERE Aemail = '$aemail'";
+            $sql = "SELECT * FROM logina WHERE Aemail = '$aemail'";
         } else {
             echo "<center><div class='msg'>You haven't logged in! [<a href='login-admin.php'>LOG IN</a>]</div></center>";
             exit();
@@ -46,9 +46,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
             //STEP 2: SQL statement
             if (isset($_COOKIE['AdminID'])) {
-                $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+                $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
             } elseif (isset($_COOKIE['Aemail'])) {
-                $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+                $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
             }
 
             //STEP 3:Execute sql
@@ -101,7 +101,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 //Step 1:Establish connection
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
                 //Step 2 :SQL Statement
-                $sql = "UPDATE Logina SET Aname=?,Aemail = ?,Acontact=?,Agender=?,Astreet=?,ATown=?,APostcode=?,AState=? WHERE AdminID = ?";
+                $sql = "UPDATE logina SET Aname=?,Aemail = ?,Acontact=?,Agender=?,Astreet=?,ATown=?,APostcode=?,AState=? WHERE AdminID = ?";
         //Step 3 : Execute SQL
                 //NOTE: when we hard code sql, we will use $con->query()
                 //when we use "?" method,use $con->prepare()

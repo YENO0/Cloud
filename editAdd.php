@@ -45,7 +45,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
             //STEP 2: SQL statement
-            $sql = "SELECT * FROM Loginc WHERE UserID = '{$_COOKIE['UserID']}'";
+            $sql = "SELECT * FROM loginc WHERE UserID = '{$_COOKIE['UserID']}'";
 
             //STEP 3:Execute sql
             $result = $con->query($sql);
@@ -79,7 +79,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-               $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+               $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
     if ($result = $con->query($sql)) {
                     if ($record = $result->fetch_object()) {
@@ -109,7 +109,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             <td class="coloum"> <?php
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-                $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+                $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
     if ($result = $con->query($sql)) {
                     while ($record = $result->fetch_object()) {
@@ -134,7 +134,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             <td class="coloum"> <?php
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-                $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+                $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
     if ($result = $con->query($sql)) {
                     while ($record = $result->fetch_object()) {
@@ -158,7 +158,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             <td class="coloum"> <?php
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-                $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+                $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
     if ($result = $con->query($sql)) {
                     while ($record = $result->fetch_object()) {
@@ -182,7 +182,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             <td class="coloum"> <?php
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-                $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+                $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
     if ($result = $con->query($sql)) {
                     while ($record = $result->fetch_object()) {

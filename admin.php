@@ -44,7 +44,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
             if (empty($msg) && $password === $rptpass) {
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-                $sql = "INSERT INTO Logina(AdminID,Aname,Aemail,Acontact,Apassword,Agender,Astreet,ATown,APostcode,AState) VALUES(?,?,?,?,?,?,?,?,?,?)";
+                $sql = "INSERT INTO logina(AdminID,Aname,Aemail,Acontact,Apassword,Agender,Astreet,ATown,APostcode,AState) VALUES(?,?,?,?,?,?,?,?,?,?)";
         $stmt = $con->prepare($sql);
                 $stmt->bind_param('ssssssssss', $adminid, $fname, $email, $contact, $password, $gender, $street, $town, $postcode, $state);
 

@@ -35,7 +35,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 $username = $_GET["username"];
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-                $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+                $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
 if ($result = $con->query($sql)) {
                     while ($record = $result->fetch_object()) {
@@ -66,7 +66,7 @@ if ($result = $con->query($sql)) {
             $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
             //STEP 2: SQL statement
-            $sql = "SELECT * FROM Loginc WHERE UserID = '{$_COOKIE['UserID']}'";
+            $sql = "SELECT * FROM loginc WHERE UserID = '{$_COOKIE['UserID']}'";
 
     //STEP 3:Execute sql
             $result = $con->query($sql);
@@ -109,7 +109,7 @@ if ($result = $con->query($sql)) {
                 //Step 1:Establish connection
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
                 //Step 2 :SQL Statement
-                $sql = "UPDATE Loginc SET Password=? WHERE UserID = ?";
+                $sql = "UPDATE loginc SET Password=? WHERE UserID = ?";
                 //Step 3 : Execute SQL
                 //NOTE: when we hard code sql, we will use $con->query()
                 //when we use "?" method,use $con->prepare()
@@ -184,7 +184,7 @@ if ($result = $con->query($sql)) {
                     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                     //step 3 SQL Statement
-                    $sql = "SELECT * FROM Loginc";
+                    $sql = "SELECT * FROM loginc";
 
 //step 4 Run SQL
                     //NOTE : $result - contains all records

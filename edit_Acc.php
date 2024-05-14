@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
     //STEP 2: SQL statement
-    $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+    $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
     //STEP 3:Execute sql
     $result = $con->query($sql);
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         //Step 1:Establish connection
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         //Step 2 :SQL Statement
-        $sql = "UPDATE Loginc SET Email = ?,Fname=?,Lname=?,Contact=?,Gender=? WHERE UserID = ?";
+        $sql = "UPDATE loginc SET Email = ?,Fname=?,Lname=?,Contact=?,Gender=? WHERE UserID = ?";
             //Step 3 : Execute SQL
         //NOTE: when we hard code sql, we will use $con->query()
         //when we use "?" method,use $con->prepare()

@@ -52,7 +52,7 @@ $header = array(
     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
     // Retrieve record from the database
-    $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+    $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
     $result = $con->query($sql);
     if ($record = $result->fetch_object()) {
                 //record found
@@ -84,7 +84,7 @@ $header = array(
                 
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-                $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+                $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
 if ($result = $con->query($sql)) {
                     if ($record = $result->fetch_object()) {
@@ -113,7 +113,7 @@ if ($result = $con->query($sql)) {
         <?php
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-        $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+        $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
 if ($result = $con->query($sql)) {
             while ($record = $result->fetch_object()) {
@@ -135,7 +135,7 @@ if ($result = $con->query($sql)) {
         <?php
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-        $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+        $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
 if ($result = $con->query($sql)) {
             while ($record = $result->fetch_object()) {
@@ -157,7 +157,7 @@ if ($result = $con->query($sql)) {
         <?php
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-        $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+        $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
 if ($result = $con->query($sql)) {
             while ($record = $result->fetch_object()) {
@@ -179,7 +179,7 @@ if ($result = $con->query($sql)) {
         <?php
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-        $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+        $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
 if ($result = $con->query($sql)) {
             while ($record = $result->fetch_object()) {
@@ -201,7 +201,7 @@ if ($result = $con->query($sql)) {
         <?php
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-        $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+        $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
 if ($result = $con->query($sql)) {
             while ($record = $result->fetch_object()) {
@@ -223,7 +223,7 @@ if ($result = $con->query($sql)) {
         <?php
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-        $sql = "SELECT * FROM Loginc WHERE UserID='{$_COOKIE['UserID']}'";
+        $sql = "SELECT * FROM loginc WHERE UserID='{$_COOKIE['UserID']}'";
 
 if ($result = $con->query($sql)) {
             while ($record = $result->fetch_object()) {

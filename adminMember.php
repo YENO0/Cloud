@@ -24,10 +24,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 // Retrieve adminid or email from cookie, isset
         if (isset($_COOKIE['AdminID'])) {
             $adminID = $_COOKIE['AdminID'];
-            $sql = "SELECT * FROM Logina WHERE AdminID = '$adminid'";
+            $sql = "SELECT * FROM logina WHERE AdminID = '$adminid'";
 } elseif (isset($_COOKIE['Aemail'])) {
             $aemail = $_COOKIE['Aemail'];
-            $sql = "SELECT * FROM Logina WHERE Aemail = '$aemail'";
+            $sql = "SELECT * FROM logina WHERE Aemail = '$aemail'";
         } else {
             echo "<center><div class='msg'>You haven't logged in! [<a href='login-admin.php'>LOG IN</a>]</div></center>";
             exit();
@@ -48,9 +48,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                     if (isset($_COOKIE['AdminID'])) {
-                        $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+                        $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
                     } elseif (isset($_COOKIE['Aemail'])) {
-                        $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+                        $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
                     }
 
                     if ($result = $con->query($sql)) {
@@ -67,9 +67,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                     if (isset($_COOKIE['AdminID'])) {
-                        $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+                        $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
                     } elseif (isset($_COOKIE['Aemail'])) {
-                        $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+                        $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
                     }
 
                     if ($result = $con->query($sql)) {
@@ -93,9 +93,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
              if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 
 if ($result = $con->query($sql)) {
@@ -121,9 +121,9 @@ if ($result = $con->query($sql)) {
                     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                     if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 
 if ($result = $con->query($sql)) {
@@ -148,9 +148,9 @@ if ($result = $con->query($sql)) {
                     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                   if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 
 if ($result = $con->query($sql)) {
@@ -176,9 +176,9 @@ if ($result = $con->query($sql)) {
             $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
             if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 if ($result = $con->query($sql)) {
             while ($record = $result->fetch_object()) {
@@ -196,9 +196,9 @@ if ($result = $con->query($sql)) {
                     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                    if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 if ($result = $con->query($sql)) {
                         while ($record = $result->fetch_object()) {
@@ -222,9 +222,9 @@ if ($result = $con->query($sql)) {
                     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                     if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 if ($result = $con->query($sql)) {
                         while ($record = $result->fetch_object()) {
@@ -248,9 +248,9 @@ if ($result = $con->query($sql)) {
                     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                    if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 if ($result = $con->query($sql)) {
                         while ($record = $result->fetch_object()) {
@@ -274,9 +274,9 @@ if ($result = $con->query($sql)) {
                         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                       if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 if ($result = $con->query($sql)) {
                             while ($record = $result->fetch_object()) {
@@ -300,9 +300,9 @@ if ($result = $con->query($sql)) {
                         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                        if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 if ($result = $con->query($sql)) {
                             while ($record = $result->fetch_object()) {
@@ -326,9 +326,9 @@ if ($result = $con->query($sql)) {
                         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                     if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 if ($result = $con->query($sql)) {
                             while ($record = $result->fetch_object()) {
@@ -350,9 +350,9 @@ if ($result = $con->query($sql)) {
                     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                    if (isset($_COOKIE['AdminID'])) {
-    $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+    $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
 } elseif (isset($_COOKIE['Aemail'])) {
-    $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+    $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
 }
 if ($result = $con->query($sql)) {
                         while ($record = $result->fetch_object()) {

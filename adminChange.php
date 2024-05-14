@@ -31,9 +31,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
         //STEP 2: SQL statement
        if (isset($_COOKIE['AdminID'])) {
-        $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+        $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
     } elseif (isset($_COOKIE['Aemail'])) {
-        $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+        $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
     }
 
     //STEP 3:Execute sql
@@ -76,7 +76,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         //Step 1:Establish connection
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         //Step 2 :SQL Statement
-        $sql = "UPDATE Logina SET Apassword=? WHERE AdminID = ?";
+        $sql = "UPDATE logina SET Apassword=? WHERE AdminID = ?";
         //Step 3 : Execute SQL
         //NOTE: when we hard code sql, we will use $con->query()
         //when we use "?" method,use $con->prepare()

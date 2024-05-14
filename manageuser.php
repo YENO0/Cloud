@@ -24,10 +24,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 // Retrieve adminid or email from cookie, if set
         if (isset($_COOKIE['AdminID'])) {
             $adminID = $_COOKIE['AdminID'];
-            $sql = "SELECT * FROM Logina WHERE AdminID = '$adminID'";
+            $sql = "SELECT * FROM logina WHERE AdminID = '$adminID'";
         } elseif (isset($_COOKIE['Aemail'])) {
             $aemail = $_COOKIE['Aemail'];
-            $sql = "SELECT * FROM Logina WHERE Aemail = '$aemail'";
+            $sql = "SELECT * FROM logina WHERE Aemail = '$aemail'";
         } else {
             echo "<center><div class='msg'>You haven't logged in! [<a href='login-admin.php'>LOG IN</a>]</div></center>";
             exit();
@@ -47,7 +47,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
             //STEP 2: SQL statement
-            $sql = "SELECT * FROM Loginc";
+            $sql = "SELECT * FROM loginc";
 
             //STEP 3:Execute sql
             $result = $con->query($sql);
@@ -124,7 +124,7 @@ if (isset($_GET['state'])) {
             //Step 2 :sql statement
             //convert array to string
             //DELETE FROM STUDENT WHERE STUDENT ID IN ('22PMD00001','22PMD00002');
-            $sql = "DELETE FROM Loginc WHERE UserID IN('" . implode("','", $esChecked) . "')";
+            $sql = "DELETE FROM loginc WHERE UserID IN('" . implode("','", $esChecked) . "')";
 
             if ($con->query($sql)) {
                 printf("<div class='info'><b>%d</b> record(s) has been deleted.</div>", $con->affected_rows);
@@ -142,9 +142,9 @@ if (isset($_GET['state'])) {
                         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                         if (isset($_COOKIE['AdminID'])) {
-                            $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+                            $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
                         } elseif (isset($_COOKIE['Aemail'])) {
-                            $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+                            $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
                         }
 
                         if ($result = $con->query($sql)) {
@@ -160,9 +160,9 @@ if (isset($_GET['state'])) {
                             $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
                             if (isset($_COOKIE['AdminID'])) {
-                                $sql = "SELECT * FROM Logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
+                                $sql = "SELECT * FROM logina WHERE AdminID = '{$_COOKIE['AdminID']}'";
                             } elseif (isset($_COOKIE['Aemail'])) {
-                                $sql = "SELECT * FROM Logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
+                                $sql = "SELECT * FROM logina WHERE Aemail = '{$_COOKIE['Aemail']}'";
                             }
                             if ($result = $con->query($sql)) {
                                 if ($record = $result->fetch_object()) {
@@ -207,7 +207,7 @@ if (isset($_GET['state'])) {
             $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
             //step 3 SQL Statement
-            $sql = "SELECT * FROM Loginc
+            $sql = "SELECT * FROM loginc
                     WHERE State LIKE'$state'
                     ORDER BY $sort $order";
 

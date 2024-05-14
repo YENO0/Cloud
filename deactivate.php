@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     //remove all the special character in the id
     $username = $con->real_escape_string($username); //real_escape_string
     //SQL Statement
-    $sql = "SELECT * FROM Loginc WHERE UserID = '$username'";
+    $sql = "SELECT * FROM loginc WHERE UserID = '$username'";
     //To execute/run the query above
     $result = $con->query($sql);
 
@@ -80,7 +80,7 @@ onclick='location=\"editAcc.php\"'/>
     $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
     //Step 2 sql statement
-    $sql = "DELETE FROM Loginc WHERE UserID = ?";
+    $sql = "DELETE FROM loginc WHERE UserID = ?";
     $stmt = $con->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();

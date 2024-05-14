@@ -31,7 +31,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
         //STEP 2: SQL statement
-        $sql = "SELECT * FROM Loginc WHERE UserID = '$username'";
+        $sql = "SELECT * FROM loginc WHERE UserID = '$username'";
 
         //STEP 3:Execute sql
         $result = $con->query($sql);
@@ -80,7 +80,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             //Step 1:Establish connection
             $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
             //Step 2 :SQL Statement
-            $sql = "UPDATE Loginc SET Email = ?,Fname=?,Lname=?,Contact=?,Gender=? WHERE UserID = ?";
+            $sql = "UPDATE loginc SET Email = ?,Fname=?,Lname=?,Contact=?,Gender=? WHERE UserID = ?";
             //Step 3 : Execute SQL
             //NOTE: when we hard code sql, we will use $con->query()
             //when we use "?" method,use $con->prepare()
@@ -123,7 +123,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 <tr class="editTr"><b>First Name:</b></tr><br>
                 <tr class="editTr"><input type="text" id="fname1" class="column2" name="fname1" value="<?php echo $fname; ?>"></tr><br>
                 <tr class="editTr"><b>Last Name:</b></tr><br>
-                <tr class="editTr"><input type="text" id=lname1" class="column2" name="lname1" value="<?php echo $lname; ?>"></tr><br>
+                <tr class="editTr"><input type="text" id="lname1" class="column2" name="lname1" value="<?php echo $lname; ?>"></tr><br>
                 <tr class="editTr"><b>Contact No:</b></tr><br>
                 <tr class="editTr"><input type="text" id="phone1" class="column2" name="phone1" value="<?php echo $contact; ?>"></tr><br>
                 <tr class="editTr"><b>Gender:</b></tr><br>
