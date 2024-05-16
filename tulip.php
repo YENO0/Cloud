@@ -98,7 +98,36 @@ if($result = $con->query($sql)){
             } 
             $result->free();
             $con->close();
-?>              
+?>
+<?php
+                    (isset($_GET['user_id']))?
+                        $user_id = trim($_GET['user_id']):
+                        $user_id = "";
+                        (isset($_GET['id']))?
+                        $pID = trim($_GET['id']):
+                        $pID = "";
+                    printf ("<form method='POST' action='cart.php?user_id=%s&id=%d'>",$user_id,$pID);
+                    ?>
+                        <div class="product-div-right">
+                        <?php 
+$id = $_GET['id'];
+$con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+$sql = "SELECT * FROM products WHERE id = $id";
+if($result = $con->query($sql)){
+                while($record = $result->fetch_object()){
+                        printf("
+                        <span class='product-name'>%s</span>
+                        <span class='product-price'>RM %s.00</span><br/>
+                            ",$record->name,
+                              $record->price,);
+                }
+            } 
+            $result->free();
+            $con->close();
+?>
+                        Quantity: <input type="number" name="quantity" value="1" class="quantity" min="1"/>
+</div></form>
                     </div></div>
 
             
