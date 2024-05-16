@@ -62,7 +62,49 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         foreach ($message as $value) {
             echo"<span class='message'>$value</span>";
         }
-        ?></div></div>
+        ?>
+ <?php
+            (isset($_GET['user_id']))?
+            $userID = trim($_GET['user_id']):
+            $userID = "";
+                echo '<a href="flowers_tulip.php?user_id='.$userID.'" class="back1">Back</a>'
+                        ?>
+                <div class="product-div">
+                    <div class="product-div-left">
+                        <?php 
+$id = $_GET['id'];
+$con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+$sql = "SELECT * FROM products WHERE id = $id";
+if($result = $con->query($sql)){
+                while($record = $result->fetch_object()){
+                        printf("
+                        <div class='img-container'><center>
+                        <img src='uploaded_img/%s' height='400' alt=''>
+                        </center></div>
+                        <div class='hover-container'>
+                        <div class='productImage'>
+                                <img src='uploaded_img/%s' class='image2'>
+                        </div>
+                        <div class='productImage'>
+                                <img src='uploaded_img/%s' class='image2'>
+                        </div>
+                        </div>
+                            ",$record->image1,
+                              $record->image1,
+                              $record->image2,
+                              $record->image3);
+                }
+            } 
+            $result->free();
+            $con->close();
+?>              
+                    </div></div>
+
+            
+            
+            
+            </div></div>
 
         <footer><?php
         include './footer1.php'
