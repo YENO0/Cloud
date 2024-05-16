@@ -29,3 +29,29 @@ if(isset($_POST['add_to_cart']) || isset($_POST['buy_now'])){
 };
  $con->close();
 ?>
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+        <title>Tulip</title>
+        <link href="css/product.css" 
+              rel="stylesheet" 
+              type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+              integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <?php include './header1.php'; ?>
+        
+        <footer><?php
+        include './footer1.php'
+        ?></footer>
+   </body>
+</html>
