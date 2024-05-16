@@ -99,17 +99,14 @@ if($result = $con->query($sql)){
             $result->free();
             $con->close();
 ?>
-<?php
-                    (isset($_GET['user_id']))?
-                        $user_id = trim($_GET['user_id']):
-                        $user_id = "";
-                        (isset($_GET['id']))?
-                        $pID = trim($_GET['id']):
-                        $pID = "";
-                    printf ("<form method='POST' action='cart.php?user_id=%s&id=%d'>",$user_id,$pID);
-                    ?>
-                        <div class="product-div-right">
-                        <?php 
+
+
+
+
+
+                                
+<form>
+<?php 
 $id = $_GET['id'];
 $con = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
@@ -117,23 +114,35 @@ $sql = "SELECT * FROM products WHERE id = $id";
 if($result = $con->query($sql)){
                 while($record = $result->fetch_object()){
                         printf("
-                        <span class='product-name'>%s</span>
-                        <span class='product-price'>RM %s.00</span><br/>
-                            ",$record->name,
-                              $record->price,);
+                        <p class='product-description'>%s</p>
+                            ",$record->description,);
                 }
             } 
             $result->free();
             $con->close();
 ?>
-                        Quantity: <input type="number" name="quantity" value="1" class="quantity" min="1"/>
-</div></form>
-                    </div></div>
-
-            
-            
-            
-            </div></div>
+                        <div class="product-rating">
+    <span class='rating1'>Click here <a class='review' href='newReview2.php'><b>[Review]</b></a> to see our reviews.</span>
+                        </div>
+                       <div class='btn-groups'>
+                            <?php
+                               (isset($_GET['id'])) ? $pID = trim($_GET['id']) : $pID = '';
+                               (isset($_GET['user_id'])) ? $user_id = trim($_GET['user_id']) : $user_id = '';
+                               printf("<form action='sneakers.php?user_id=%s&id=%d' method='POST'>", $user_id, $pID);
+                                echo "<input type='submit' class='add-cart-btn' name='add_to_cart' value='Add To Cart'/>";
+                                echo "<input type='hidden' name='prodID' value='$pID' />";
+                                echo "<input type='hidden' name='custID' value='$user_id' />";
+                                echo "</form>";
+                            ?>
+                        <input type='submit' class='buy-now-btn' name='buy_now' value='buy now'/>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <script src="product.js" type="text/javascript"></script>
 
         <footer><?php
         include './footer1.php'
