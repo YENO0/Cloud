@@ -49,7 +49,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
     </head>
     <body>
         <?php include './header1.php'; ?>
-        
+        <?php
+        // Retrieve admin id and admin email from cookies
+        $user_id = '';
+        if(isset($_COOKIE['UserID'])){
+            $user_id = $_COOKIE['UserID'];
+        }
+        ?>
+        <div class="main-wrapper">
+            <div class="container">
+                <?php 
+        foreach ($message as $value) {
+            echo"<span class='message'>$value</span>";
+        }
+        ?></div></div>
+
         <footer><?php
         include './footer1.php'
         ?></footer>
